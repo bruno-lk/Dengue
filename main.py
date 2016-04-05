@@ -7,7 +7,7 @@ d = 0
 # prob de diaria de recuperação r = 1-d
 r = 1
 # risco de transmição em area com alta densidade de mosquitos - h = [0.12, 11.2]
-h = 0.12
+h = 1
 # risco de transmição em area com baixa densidade de mosquitos - l = [0.09, 1.02]
 l = 0.09
 # dias infectado

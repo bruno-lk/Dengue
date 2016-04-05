@@ -5,7 +5,7 @@
 # prob de contaminação/comutação entre estados
 d = 5
 # prob de diaria de recuperação r = 1-d
-r = 1
+r = 4
 # risco de transmição em area com alta densidade de mosquitos - h = [0.12, 11.2]
 h = 0.5
 # risco de transmição em area com baixa densidade de mosquitos - l = [0.09, 1.02]
@@ -23,8 +23,8 @@ bh = ch = 0.9
 tl = 13
 #th = 25
 # expectativa de vida do mosquito/taxa de morte - 1/u = [0.83, 0.96]
-ul = 0.09
-uh = 0.09
+ul = 1/0.09
+uh = 1/0.09
 # densidade de mosquitos em 2010
 M = 2.24
 # densidade de humandos em 2010

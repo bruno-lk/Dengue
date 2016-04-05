@@ -3,9 +3,9 @@
 ###########
 
 # prob de contaminação/comutação entre estados
-d = 0.1
+d = 0
 # prob de diaria de recuperação r = 1-d
-r = 0.9
+r = 1
 # risco de transmição em area com alta densidade de mosquitos - h = [0.12, 11.2]
 h = 0.12
 # risco de transmição em area com baixa densidade de mosquitos - l = [0.09, 1.02]
@@ -122,7 +122,7 @@ print("pi Yh:",piYh)
 print("pi Yl:",piYl)
 
 
-print("matriz depois de 6 anos (2016)")
+print("\nmatriz depois de 6 anos (2016)")
 for i in range(tam):
     print()
     for j in range(tam):

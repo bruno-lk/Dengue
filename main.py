@@ -3,13 +3,13 @@
 ###########
 
 # prob de contaminação/comutação entre estados
-d = 0
+d = 5
 # prob de diaria de recuperação r = 1-d
 r = 1
 # risco de transmição em area com alta densidade de mosquitos - h = [0.12, 11.2]
-h = 1
+h = 0.5
 # risco de transmição em area com baixa densidade de mosquitos - l = [0.09, 1.02]
-l = 0.09
+l = 0.5
 # dias infectado
 D = 5
 # taxa de picadas de mosquito - a = [0.6, 1.2]
@@ -20,11 +20,11 @@ ah = 1.2
 bl = cl = 0.5
 bh = ch = 0.9
 # periodo de incubação t = [7, 25]
-tl = 7
-th = 25
+tl = 13
+#th = 25
 # expectativa de vida do mosquito/taxa de morte - 1/u = [0.83, 0.96]
-ul = 0.83
-uh = 0.96
+ul = 0.09
+uh = 0.09
 # densidade de mosquitos em 2010
 M = 2.24
 # densidade de humandos em 2010
@@ -93,7 +93,7 @@ for i in range(tam):
 print("\n")
 
 print("Casos secundarios em area com alta densidade de vetores:")
-print(casosSecundarios(ah,bh,ch,uh,th))
+print(casosSecundarios(ah,bh,ch,uh,tl))
 print()
 print("Casos secundarios em area com baixa densidade de vetores:")
 print(casosSecundarios(al,bl,cl,ul,tl))
@@ -106,8 +106,8 @@ print("Tempo gasto em area com baixa densidade de vetores")
 print(tempoPassado(l))
 print()
 
-print("Potencial perigo")
-print((tempoPassado(h)*casosSecundarios(ah,bh,ch,uh,th)) + (tempoPassado(l)*casosSecundarios(al,bl,cl,ul,tl)))
+print("Potencial perigo de epidemia")
+print((tempoPassado(h)*casosSecundarios(ah,bh,ch,uh,tl)) + (tempoPassado(l)*casosSecundarios(al,bl,cl,ul,tl)))
 
 ## elementos estacionarios ##
 print()
